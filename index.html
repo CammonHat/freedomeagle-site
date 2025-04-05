@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreedomEagle</title>
+  <script defer src="main.js"></script>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-100 text-gray-900 p-4">
+  <div class="max-w-2xl mx-auto">
+    <div class="flex justify-between items-center mb-4">
+      <h1 class="text-2xl font-bold" data-i18n="title">Welcome to FreedomEagle</h1>
+      <select id="languageSelect" class="border p-1 rounded">
+        <option value="en">English</option>
+        <option value="ru">Русский</option>
+      </select>
+    </div>
+
+    <form id="profileForm" class="bg-white shadow-md rounded p-4 mb-4">
+      <h2 class="text-xl font-semibold mb-2" data-i18n="profile_title">Create Your Profile</h2>
+      <label class="block mb-2">
+        <span data-i18n="name">Name:</span>
+        <input type="text" id="name" class="border p-2 w-full rounded" required>
+      </label>
+      <label class="block mb-2">
+        <span data-i18n="email">Email:</span>
+        <input type="email" id="email" class="border p-2 w-full rounded" required>
+      </label>
+      <label class="block mb-2">
+        <span data-i18n="avatar">Avatar URL:</span>
+        <input type="url" id="avatar" class="border p-2 w-full rounded">
+      </label>
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded mt-2" data-i18n="submit">Create Profile</button>
+    </form>
+
+    <div id="profileDisplay" class="bg-white shadow-md rounded p-4 hidden">
+      <h2 class="text-xl font-semibold mb-2" data-i18n="your_profile">Your Profile</h2>
+      <p><strong data-i18n="name">Name:</strong> <span id="displayName"></span></p>
+      <p><strong data-i18n="email">Email:</strong> <span id="displayEmail"></span></p>
+      <img id="displayAvatar" class="mt-2 rounded-full w-24 h-24 object-cover" src="" alt="Avatar">
+    </div>
+  </div>
+</body>
+</html>
